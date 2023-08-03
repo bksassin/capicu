@@ -1,0 +1,12 @@
+<section class="relative h-screen flex flex-col items-center justify-center text-center text-white py-0 px-3">
+  <div class="video-docker absolute top-0 left-0 w-full h-full overflow-hidden z-10">
+    <video class="min-w-full min-h-full absolute object-cover" src="/assets/header2.mp4" type="video/mp4" autoplay muted loop playsinline crossorigin="anonymous"></video>
+  </div>
+  <div class="video-content absolute top-0 flex flex-col items-center justify-center w-full h-full space-y-2 z-20">
+    <h1 id="hero-title" class="underline decoration-[#e78711]">CAPÍCU</h1>
+    <h3 class="font-light text-3xl">Authentic Puerto Rican Cuisine</h3>
+    <a href="https://foodtruck.pub/?id=11255" class="pt-3">
+      <button *ngIf="shouldShowOrderButton" class="bg-[#e78711] hover:bg-[#e39332] p-2 rounded-md text-black">Order Now</button>
+    </a>
+  </div>
+</section>

@@ -1,0 +1,85 @@
+<div id="menu" class="lg:w-[75%]  mx-auto lg:p-16 p-8 space-y-2 scroll-margin-top">
+  <div class="lg:grid lg:grid-cols-3  gap-6">
+    <div class="lg:grid lg:grid-cols-2 lg:gap-2 pb-10">
+      <div class="hidden xl:block relative w-full lg:h-40 mb-5 rounded-md overflow-hidden">
+        <img src="/assets/food_placeholder.png" alt="Dish 1" class="w-full h-full object-cover">
+        <div class="absolute bottom-0 w-full h-8 bg-black bg-opacity-60 text-white text-sm flex items-center justify-center">Polo Asado</div>
+      </div>
+      <div class="hidden xl:block relative w-full lg:h-40 rounded-md overflow-hidden">
+        <img src="/assets/food_placeholder.png" alt="Dish 2" class="w-full h-full object-cover">
+        <div class="absolute bottom-0 w-full h-8 bg-black bg-opacity-60 text-white text-sm flex items-center justify-center">Pernil</div>
+      </div>
+      <div class="hidden xl:block relative w-full h-40 rounded-md overflow-hidden">
+        <img src="/assets/food_placeholder.png" alt="Dish 3" class="w-full h-full object-cover">
+        <div class="absolute bottom-0 w-full h-8 bg-black bg-opacity-60 text-white text-sm flex items-center justify-center">Beef Empanada</div>
+      </div>
+      <div class="hidden xl:block relative w-full h-40 rounded-md overflow-hidden">
+        <img src="/assets/food_placeholder.png" alt="Dish 4" class="w-full h-full object-cover">
+        <div class="absolute bottom-0 w-full h-8 bg-black bg-opacity-60 text-white text-sm flex items-center justify-center">Fried Plantains</div>
+      </div>
+      <div class="hidden xl:block relative w-full h-40 rounded-md overflow-hidden">
+        <img src="/assets/food_placeholder.png" alt="Dish 5" class="w-full h-full object-cover">
+        <div class="absolute bottom-0 w-full h-8 bg-black bg-opacity-60 text-white text-sm flex items-center justify-center">Arroz Con Gandules</div>
+      </div>
+      <div class="hidden xl:block relative w-full h-40 rounded-md overflow-hidden">
+        <img src="/assets/food_placeholder.png" alt="Dish 6" class="w-full h-full object-cover">
+        <div class="absolute bottom-0 w-full h-8 bg-black bg-opacity-60 text-white text-sm flex items-center justify-center">Guava and Cheese Empanada</div>
+      </div>
+    </div>
+    <div class="bg-white shadow-md rounded-md p-4 mb-6 lg:col-span-2">
+      <div class="flex flex-row items-center justify-between border-b-2 border-orange-300 mb-10">
+        <h3 class="text-2xl font-semibold">MENU</h3>
+        <a href="https://foodtruck.pub/?id=11255" class="ml-auto text-orange-600 hover:text-orange-400 text-lg">
+          <button *ngIf="shouldShowOrderButton" class="underline">Order Now</button>
+        </a>
+      </div>
+      <h3 class="text-xl font-semibold underline">Combos</h3>
+      <p class="mb-2 text-xs">(Comes with beans and white or yellow rice with your choice of side)</p>
+      <ul class="list-disc pl-5">
+        <li *ngFor="let dish of dishes">
+          <div class="flex justify-between">
+            <span>{{dish.name}}</span>
+            <span>${{dish.price}}</span>
+          </div>
+        </li>
+      </ul>
+      <h3 class="text-xl font-semibold mb-2 mt-4 underline">Empanadas w/cheese</h3>
+      <ul class="list-disc pl-5">
+        <li *ngFor="let empanadas of empanadas">
+          <div class="flex justify-between">
+            <span>{{empanadas.name}}</span>
+            <span>${{empanadas.price}}</span>
+          </div>
+        </li>
+      </ul>
+      <h3 class="text-xl font-semibold mb-2 mt-4 underline">Sides</h3>
+      <ul class="list-disc pl-5">
+        <li *ngFor="let sides of sides">
+          <div class="flex justify-between">
+            <span>{{sides.name}}</span>
+            <span>${{sides.price}}</span>
+          </div>
+        </li>
+      </ul>
+      <h3 class="text-xl font-semibold mb-2 mt-4 underline">Dessert Empanadas</h3>
+      <ul class="list-disc pl-5">
+        <li *ngFor="let desserts of desserts">
+          <div class="flex justify-between">
+            <span>{{desserts.name}}</span>
+            <span>${{desserts.price}}</span>
+          </div>
+        </li>
+      </ul>
+      <h3 class="text-xl font-semibold mb-2 mt-4 underline">Drinks</h3>
+      <ul class="list-disc pl-5 border-b-2 border-orange-300 pb-6">
+        <li *ngFor="let drink of drinks">
+          <div class="flex justify-between">
+            <span>{{drink.name}}</span>
+            <span>${{drink.price}}</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>
