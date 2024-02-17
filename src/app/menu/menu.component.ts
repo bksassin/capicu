@@ -7,22 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
   dishes = [
-    { name: 'Pollo Asado (Grilled Chicken)', price: 14 },
-    { name: 'Pernil (Roasted Pork)', price: 14 },
-    { name: 'Carne Frita (Fried Pork chunks)', price: 14 },
-    { name: '2 Empanadas', price: 12 },
+    { name: 'Pollo Asado (Grilled Chicken)', price: 15 },
+    { name: 'Pernil (Roasted Pork)', price: 15 },
+    { name: 'Carne Frita (Fried Pork chunks)', price: 16 },
+    { name: '2 Empanadas', price: 15 },
   ];
 
 
   empanadas = [
-    { name: 'Beef', price: 3.50 },
-    { name: 'Chicken', price: 3.50 },
-    { name: 'Rice', price: 3.50 },
+    { name: 'Beef', price: 4 },
+    { name: 'Chicken', price: 4 }
   ];
 
   drinks = [
-    { name: 'Cans', price: 1 },
-    { name: 'Bottled Water', price: 1 },
+    { name: 'All Drinks', price: 1 },
   ];
 
   desserts = [
@@ -40,19 +38,18 @@ export class MenuComponent implements OnInit {
     { name: 'Beans', price: 4 }
   ];
 
+  icees = [
+    { name: '1 Scoop', price: 3 },
+    { name: '2 Scoops', price: 5 },
+  ];
+
   public shouldShowOrderButton: boolean = false;
 
   constructor() {
     const currentDayOfWeek = new Date().getDay();
-    const currentHour = new Date().getHours();
-    const easternTimeOffset = -4; // Eastern Time is 4 hours behind UTC (Easter Daylight Time)
 
     // Check if it's Thursday (4), Friday (5), or Saturday (6)
-    // and if the current hour is between 12 PM (noon) and 9 PM (inclusive)
-    if (
-      (currentDayOfWeek >= 4 && currentDayOfWeek <= 6) &&
-      (currentHour >= (12 + easternTimeOffset) && currentHour <= (21 + easternTimeOffset))
-    ) {
+    if (currentDayOfWeek >= 4 && currentDayOfWeek <= 6) {
       this.shouldShowOrderButton = true;
     }
   }
