@@ -9,7 +9,6 @@ import { AboutComponent } from './about/about.component';
 import { MenuComponent } from './menu/menu.component';
 import { LocationComponent } from './location/location.component';
 import { FooterComponent } from './footer/footer.component';
-import { MenuFullComponent } from './menu-full/menu-full.component';
 import { HomeComponent } from './home/home.component';
 
 @NgModule({
@@ -21,7 +20,6 @@ import { HomeComponent } from './home/home.component';
     MenuComponent,
     LocationComponent,
     FooterComponent,
-    MenuFullComponent,
     HomeComponent
   ],
   imports: [
